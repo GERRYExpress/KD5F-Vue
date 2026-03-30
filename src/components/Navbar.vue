@@ -4,7 +4,7 @@ import { ref } from 'vue'
 </script>
 
 <template>
-    <div class="container-fluid m-0 d-flex justify-content-center py-5">
+    <header class="container-fluid m-0 d-flex justify-content-center py-5">
         <div id="brand" class="mx-2 d-flex rounded-5 p-3">
             <img src="/KD5Ficon.png" alt="KD5F Icon" class="rounded-circle">
             <a class="text-center  link-light link-underline-opacity-0 px-2">
@@ -25,7 +25,7 @@ import { ref } from 'vue'
             <a class="link-light rounded-circle w-100 h-100 py-4 px-3 mx-2" href=""><i class="bi bi-heart fs-2"></i></a>
             <a class="link-light rounded-circle w-100 h-100 py-4 px-3 mx-2" href=""><i class="bi bi-person fs-2"></i></a>
         </div>
-    </div>
+    </header>
 </template>
 
 <style scoped>
