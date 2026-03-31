@@ -31,7 +31,6 @@ const { game }  = defineProps(['game']);
             </p>
             <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
         </div>
-
     </div>
 </template>
 

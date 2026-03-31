@@ -1,19 +1,19 @@
 <template>
-    <div id="carouselExampleIndicators" class="carousel slide mb-5">
+    <div id="carouselExampleIndicators" class="carousel slide mb-5 rounded-4">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
+        <div class="carousel-inner rounded-4">
             <div class="carousel-item active">
             <img src="https://picsum.photos/1280/720" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="https://picsum.photos/id/237/1280/720" class="d-block w-100" alt="...">
+            <img src="https://picsum.photos/1280/720" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="https://picsum.photos/id/237/1280/720" class="d-block w-100" alt="...">
+            <img src="https://picsum.photos/1280/720" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
