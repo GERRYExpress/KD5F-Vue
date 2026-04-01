@@ -4,9 +4,11 @@ import { ref } from 'vue'
 </script>
 
 <template>
-    <header class="container m-0 d-flex justify-content-evenly py-5 mx-auto">
+    <nav class="container m-0 d-flex justify-content-evenly py-5 mx-auto">
         <div id="brand" class="mx-2 d-flex rounded-5 p-3 h-100">
-            <img src="/KD5Ficon.png" alt="KD5F Icon" class="rounded-circle">
+            <a href="/">
+                <img src="/KD5Ficon.png" alt="KD5F Icon" class="rounded-circle">
+            </a>
             <a class="text-center  link-light link-underline-opacity-0 px-2">
                 <i class="bi bi-tags-fill fs-2 lh-1"><br><span class="fs-5">Category</span></i>
             </a>
@@ -21,11 +23,11 @@ import { ref } from 'vue'
             </form>
         </div>
         <div class="mx-2 nav-button-container d-block">
-            <a class="link-light rounded-circle w-100 h-100 py-4 px-3 mx-2 d-inline" href=""><i class="bi bi-cart fs-2"></i></a>
-            <a class="link-light rounded-circle w-100 h-100 py-4 px-3 mx-2 d-inline" href=""><i class="bi bi-heart fs-2"></i></a>
-            <a class="link-light rounded-circle w-100 h-100 py-4 px-3 mx-2 d-inline" href=""><i class="bi bi-person fs-2"></i></a>
+            <a class="link-light rounded-circle w-100 h-100 py-4 px-3 mx-2 d-inline" href="/cart"><i class="bi bi-cart fs-2"></i></a>
+            <a class="link-light rounded-circle w-100 h-100 py-4 px-3 mx-2 d-inline" href="/wishlist"><i class="bi bi-heart fs-2"></i></a>
+            <a class="link-light rounded-circle w-100 h-100 py-4 px-3 mx-2 d-inline" href="/account"><i class="bi bi-person fs-2"></i></a>
         </div>
-    </header>
+    </nav>
 </template>
 
 <style scoped>
