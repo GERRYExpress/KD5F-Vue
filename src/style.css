@@ -2,3 +2,8 @@ body {
     background-color: #8122C9;
     color: #FEFEFE;
 }
+
+.btn-primary {
+    background-color: #B6EE01 !important;
+    color: #8122C9;
+}
