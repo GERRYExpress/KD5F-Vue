@@ -4,6 +4,7 @@ import Result from '/src/views/Result.vue';
 import Cart from '/src/views/Cart.vue';
 import Wishlist from '/src/views/Wishlist.vue';
 import Contact from '/src/views/Contact.vue';
+import Checkout from '/src/views/Checkout.vue';
 
 const routes = [
 
@@ -11,7 +12,8 @@ const routes = [
     { path: '/result', name: 'Result', component: Result},
     { path: '/cart', name: 'Cart', component: Cart},
     { path: '/wishlist', name: 'Wishlist', component: Wishlist},
-    { path: '/contact', name: 'Contact', component: Contact}
+    { path: '/contact', name: 'Contact', component: Contact},
+    { path: '/checkout', name: 'Checkout', component: Checkout}
 ]
 
 const router = createRouter( {
