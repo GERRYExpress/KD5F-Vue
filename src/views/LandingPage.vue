@@ -1,57 +1,35 @@
 <script setup lang="ts">
+import { onMounted, ref, type Ref } from 'vue';
 import Carousel from '/src/components/Carousel.vue';
 import GameCard from '/src/components/GameCard.vue';
-const games: Object[] = [
-    {
-        name: "DARK SOULS III",
-        price: 39.99,
-    },
-    {
-        name: "DARK SOULS REMASTERED",
-        price: 29.99,
-    },
-    {
-        name: "DARK SOULS REMASTERED",
-        price: 29.99,
-    },
-    {
-        name: "DARK SOULS REMASTERED",
-        price: 29.99,
-    },
-    {
-        name: "DARK SOULS II",
-        price: 39.99,
-    },
-    {
-        name: "DARK SOULS II",
-        price: 39.99,
-    },
-    {
-        name: "DARK SOULS II",
-        price: 39.99,
-    },
-    {
-        name: "ELDEN RING",
-        price: 49.99,
-    },
-    {
-        name: "ELDEN RING",
-        price: 49.99,
-    },
-    {
-        name: "ELDEN RING",
-        price: 49.99,
-    },
-    {
-        name: "ELDEN RING",
-        price: 49.99,
-    },
-    {
-        name: "ELDEN RING NIGHTREIGN",
-        price: 19.99,
-    }
-];
+import axios from 'axios';
 
+interface Game {
+    id: number,
+    name: string,
+    category: string,
+    price: number,
+    poster_url: string
+}
+
+const API_URL = ref(import.meta.env.VITE_API_URL);
+const games: Ref<Game[]> = ref([]);
+const getGames = async () => {
+    try {
+        const response = await axios.get(`${API_URL.value}/product/release`);
+        games.value = response.data;
+        if (games.value.length > 12) {
+            games.value = games.value.splice(0, 12);
+        }
+    } catch (err) {
+        if (err instanceof Error) {
+            console.error(err.message);
+        } else {
+            console.error(`Unexpected error occurred: ${String(err)}`);
+        }
+    }
+}
+onMounted(getGames);
 </script>
 
 <template>
@@ -59,7 +37,10 @@ const games: Object[] = [
         <h1>Highlights</h1>
         <Carousel></Carousel>
         <div class="card-container row w-100 gap-2 justify-content-evenly w-100 mx-auto">
-            <GameCard  v-for="game in games" :game></GameCard>
+            <GameCard
+                v-for="game in games"
+                :key="game.id"
+                :game></GameCard>
         </div>
         <div class="d-flex justify-content-center pb-3">
             <a href="/result" id="explore-button" class=" btn btn-primary fs-2 fw-bold rounded-pill px-4 py-2 border-0">Explore more</a>
