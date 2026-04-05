@@ -1,7 +1,13 @@
 <script lang="ts" setup>
 import CartItem from '../components/CartItem.vue';
+import { computed } from 'vue';
 
-const games: Object[] = [
+interface Game {
+    name: String;
+    price: number;
+}
+
+const games: Game[] = [
     {
         name: "DARK SOULS III",
         price: 39.99,
@@ -51,11 +57,10 @@ const games: Object[] = [
         price: 19.99,
     }
 ];
-const prices:number[] = games.map(game => game.price);
-let totalPrice: number = (prices.reduce((acc:number, val:number) => acc+val));
-const VAT:number = Number(totalPrice) * 0.07;
-totalPrice += VAT;
-totalPrice = Number(totalPrice.toFixed(2));
+
+const subtotal = computed(() => { return games.reduce((acc: number, game: Game) => acc + game.price, 0)});
+const VAT = computed(() => { return 0.07 * subtotal.value });
+const totalPrice = computed(() => { return (VAT.value + subtotal.value).toFixed(2)});
 
 </script>
 
