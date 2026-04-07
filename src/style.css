@@ -5,5 +5,11 @@ body {
 
 .btn-primary {
     background-color: #B6EE01 !important;
+    text-decoration: none;
     color: #8122C9;
+}
+
+.link-primary {
+    color: #B6EE01 !important;
+    text-decoration-color: #B6EE01 !important;
 }
