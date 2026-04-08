@@ -9,6 +9,14 @@ body {
     color: #8122C9;
 }
 
+.btn-outline-primary {
+    border-color: #B6EE01;
+    color: #B6EE01;
+}
+.btn-outline-primary:hover, .btn-outline-primary:active {
+    background-color: #B6EE01;
+}
+
 .link-primary {
     color: #B6EE01 !important;
     text-decoration-color: #B6EE01 !important;

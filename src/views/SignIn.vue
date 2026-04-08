@@ -9,8 +9,6 @@ const oppositeRole = ref(role.value === 'buyer' ? 'seller' : role.value === 'sel
 if (role.value === 'none') {
     location.href = '/';
 }
-const username = ref('');
-const password = ref('');
 
 
 </script>
